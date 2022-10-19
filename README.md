@@ -40,6 +40,7 @@ cd dwm
 
 * dwm-systray-6.3.diff
 * dwm-fullgaps-toggle-20200830.diff
+* dwm-pertag-20200914-61bb8b2.diff
 
 ***
 
