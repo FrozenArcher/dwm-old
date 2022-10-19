@@ -42,6 +42,7 @@ cd dwm
 * dwm-fullgaps-toggle-20200830.diff
 * dwm-pertag-20200914-61bb8b2.diff
 * dwm-fancybar-20220527-d3f93c7.diff
+* dwm-actualfullscreen-20211013-cb3f58a.diff
 
 ***
 
