@@ -1,5 +1,7 @@
 # FrozenArcher's DWM fork
 
+based on dwm 6.4
+
 see [upstream](https://dwm.suckless.org/)
 
 **see my [dotfile repository](https://github.com/FrozenArcher/archconfig.git) for scripts used and the complete environment**
