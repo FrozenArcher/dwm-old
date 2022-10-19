@@ -38,7 +38,8 @@ cd dwm
 
 ## Applied patches
 
-dwm-systray-6.3.diff
+* dwm-systray-6.3.diff
+* dwm-fullgaps-toggle-20200830.diff
 
 ***
 
