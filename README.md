@@ -36,15 +36,6 @@ cd dwm
 
 ## Applied patches
 
-* dwm-alpha-20201019-61bb8b2.diff
-* dwm-cfacts-vanitygaps-6.2\_combo.diff
-* dwm-colorbar-6.3.diff
-* dwm-fancybar-20220527-d3f93c7.diff
-* dwm-fullscreen-6.2.diff
-* dwm-hide\_vacant\_tags-6.2.diff
-* dwm-pertag-20200914-61bb8b2.diff
-
-and more!
 
 ***
 
