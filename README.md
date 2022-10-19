@@ -38,6 +38,7 @@ cd dwm
 
 ## Applied patches
 
+dwm-systray-6.3.diff
 
 ***
 
