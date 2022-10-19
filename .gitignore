@@ -1,0 +1,8 @@
+/dwm
+/**/*.o
+/patches
+/**/*.diff
+/**/*.orig
+/**/*.rej
+/**/sed*
+/config.h
