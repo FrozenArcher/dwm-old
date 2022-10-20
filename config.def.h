@@ -68,11 +68,14 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
+#define screenshotcmd "xfce4-screenshooter -r"
+#define appmenucmd "~/scripts/rofi-appmenu.sh"
 static const char *termcmd[]  = { "kitty", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          SHCMD("~/scripts/rofi-appmenu.sh") },
+	{ MODKEY,                       XK_p,      spawn,          SHCMD(appmenucmd) },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD(screenshotcmd) },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },

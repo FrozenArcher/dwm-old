@@ -14,6 +14,7 @@ see [upstream](https://dwm.suckless.org/)
 * picom-animations-git (aur)
 * pulseaudio (for `pactl`)
 * trayer
+* xfce4-screenshooter
 
 ## Installation
 
