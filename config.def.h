@@ -70,9 +70,17 @@ static const Layout layouts[] = {
 /* commands */
 #define screenshotcmd "xfce4-screenshooter -r"
 #define appmenucmd "~/scripts/rofi-appmenu.sh"
+#define VOLCTL(cmd) SHCMD("~/dwm/scripts/volctl.sh "cmd)
 static const char *termcmd[]  = { "kitty", NULL };
 
+#include <X11/XF86keysym.h>
+
 static const Key keys[] = {
+    /* Volume keys */
+    /*   Key                           function        argument */
+	{ 0, XF86XK_AudioLowerVolume,      spawn,          VOLCTL("down") },
+	{ 0, XF86XK_AudioMute,             spawn,          VOLCTL("mute") },
+	{ 0, XF86XK_AudioRaiseVolume,      spawn,          VOLCTL("up") },
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          SHCMD(appmenucmd) },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD(screenshotcmd) },
