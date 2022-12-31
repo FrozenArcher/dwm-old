@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python
 
 # upower -i $(upower -e | grep BAT) | grep --color=never -E "state|percentage" | ./process_power.py
 

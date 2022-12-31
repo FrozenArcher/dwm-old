@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/python
 
 # amixer sget Master | awk '/Left:/ { printf "%s %s\n",$5,$6 }' | ~/dwm/scripts/baritems/volinfo.py
 
