@@ -15,5 +15,5 @@ volinfo() {
 }
 
 
-bar="< $(volinfo) // $(battery)  // $(dtime) |"
+bar="$(volinfo) | $(battery)  | $(dtime) |"
 xsetroot -name "$bar"
