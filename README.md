@@ -31,11 +31,10 @@ cd dwm
 
 ## My features
 
-* rolling through every layouts
 * audio control shortcuts & its realtime refresh bar module
 * run autostart script (similar to the autostart patch)
-* toggle trayer (script needed)
 * rofi apprun menu
+* rofi powermenu
 
 ## Applied patches
 
@@ -50,5 +49,4 @@ cd dwm
 
 ## Upcoming features
 
-* rofi power menu
 * brightness control
