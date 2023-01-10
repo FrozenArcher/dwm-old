@@ -1,16 +1,11 @@
 #!/bin/env bash
-VOL_INFO_RAW=($(amixer sget Master | awk '/Left:/ { printf "%s %s\n",$5,$6 }'))
-VOL_INFO=($(
-    for i in ${!VOL_INFO_RAW[@]}; do
-        echo ${VOL_INFO_RAW[$i]} | cut -d'[' -f2 | cut -d']' -f1
-    done
-))
-VOL_PERC=${VOL_INFO[0]}
-VOL_STAT=${VOL_INFO[1]}
-VOL_PERC_INT=$(echo $VOL_PERC | cut -d'%' -f1)
+DEFAULT_SINK=$(pactl get-default-sink)
+VOL_PERC=$(pactl get-sink-volume $DEFAULT_SINK | cut -d'/' -f2 | xargs | cut -d' ' -f1)
+VOL_STAT=$(pactl get-sink-mute $DEFAULT_SINK | cut -d' ' -f2)
+VOL_PERC_INT=${VOL_PERC:0:-1}
 
 ID=0
-if [[ $VOL_STAT == "off" ]]; then
+if [[ $VOL_STAT == "yes" ]]; then
     ID=3
 else
     if [ $VOL_PERC_INT -ge 0 ] && [ $VOL_PERC_INT -le 20 ]; then
@@ -25,9 +20,9 @@ fi
 ICONS=("🔊" "🔉" "🔈" "🔇")
 ICON=${ICONS[$ID]}
 MSG=""
-if [[ $VOL_STAT == "on" ]]; then
+if [[ $VOL_STAT == "no" ]]; then
     MSG="$VOL_PERC"
-elif [[ $VOL_STAT == "off" ]]; then
+elif [[ $VOL_STAT == "yes" ]]; then
     MSG="muted"
 else
     MSG="$VOL_STAT"
