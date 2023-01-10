@@ -4,21 +4,21 @@ based on dwm 6.4
 
 see [upstream](https://dwm.suckless.org/)
 
-**see my [dotfile repository](https://github.com/FrozenArcher/archconfig.git) for scripts used and the complete environment**
+**see my [dotfile repository](https://github.com/FrozenArcher/arch-config.git) for scripts used and the complete environment**
 
 ## Needed packages
 
 * acpi
-* alsa-utils (for `amixer`)
 * kitty
-* picom-animations-git (aur)
+* picom
 * pulseaudio (for `pactl`)
-* trayer
+* upower
 * xfce4-screenshooter
+* xorg-xsetroot
 
 ## Installation
 
-```
+``` bash
 # git clone via http
 git clone https://github.com/FrozenArcher/dwm.git
 # or via ssh
