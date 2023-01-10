@@ -1,0 +1,40 @@
+#!/bin/env bash
+
+BAT_STAT_INFO=($(upower -i $(upower -e | grep BAT) | grep -E "state|percentage" | xargs | awk '{printf"%s %s\n", $2, $4}'))
+BAT_STAT=${BAT_STAT_INFO[0]}
+BAT_PERC=${BAT_STAT_INFO[1]}
+BAT_ICONS=(" " " " " " " " " ")
+BAT_PERC_INT="$(echo $BAT_PERC | cut -d'%' -f1)"
+
+if [ "$BAT_PERC_INT" -gt 90 ]; then
+    ID=0
+elif [ "$BAT_PERC_INT" -gt 70 ]; then
+    ID=1
+elif [ "$BAT_PERC_INT" -gt 40 ]; then
+    ID=2
+elif [ "$BAT_PERC_INT" -gt 15 ]; then
+    ID=3
+else
+    ID=4
+fi
+
+MSG="$BAT_PERC"
+ICON=${BAT_ICONS[$ID]}
+
+if [[ $BAT_STAT == "fully_charged" ]]; then
+    MSG="FULL"
+elif [[ $BAT_PERC_INT -lt 10 ]] && [[ $BAT_STAT != "charging" ]]; then
+    # warning icon
+    ICON="⚠ $ICON"
+    MSG="$BAT_PERC"
+else
+    MSG="$BAT_PERC"
+fi
+
+if [[ $BAT_STAT == "charging" ]]; then
+    # cable icon
+    ICON="🔌 $ICON"
+    MSG="$BAT_PERC"
+fi
+
+echo "$MSG $ICON"

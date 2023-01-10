@@ -1,6 +1,6 @@
 #!/bin/bash
 
-updcmd="sh -c ~/dwm/scripts/baritems/updatebar.sh"
+updcmd="sh -c ~/dwm/scripts/updatebar.sh"
 
 if [ $1 == "up" ]; then
     pactl set-sink-volume 0 +5%

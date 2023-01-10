@@ -1,0 +1,36 @@
+#!/bin/env bash
+VOL_INFO_RAW=($(amixer sget Master | awk '/Left:/ { printf "%s %s\n",$5,$6 }'))
+VOL_INFO=($(
+    for i in ${!VOL_INFO_RAW[@]}; do
+        echo ${VOL_INFO_RAW[$i]} | cut -d'[' -f2 | cut -d']' -f1
+    done
+))
+VOL_PERC=${VOL_INFO[0]}
+VOL_STAT=${VOL_INFO[1]}
+VOL_PERC_INT=$(echo $VOL_PERC | cut -d'%' -f1)
+
+ID=0
+if [[ $VOL_STAT == "off" ]]; then
+    ID=3
+else
+    if [ $VOL_PERC_INT -ge 0 ] && [ $VOL_PERC_INT -le 20 ]; then
+        ID=2
+    elif [ $VOL_PERC_INT -le 60 ]; then
+        ID=1
+    else
+        ID=0
+    fi
+fi
+
+ICONS=("🔊" "🔉" "🔈" "🔇")
+ICON=${ICONS[$ID]}
+MSG=""
+if [[ $VOL_STAT == "on" ]]; then
+    MSG="$VOL_PERC"
+elif [[ $VOL_STAT == "off" ]]; then
+    MSG="muted"
+else
+    MSG="$VOL_STAT"
+fi
+
+echo "$ICON $MSG"

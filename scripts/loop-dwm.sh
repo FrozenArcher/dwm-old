@@ -4,7 +4,7 @@
 ~/scripts/wmrc.sh
 
 # bar items
-~/dwm/scripts/baritems/bar.sh &
+~/dwm/scripts/bar.sh &
 
 while true; do
     # Log stderror to a file
