@@ -3,8 +3,12 @@
 ITEM_PATH="$HOME/dwm/scripts/baritems"
 
 dtime() {
-    echo -e "🕓 $(date +"%F %R")"
+    echo -e "🕓 $(date +"%m-%d %R")"
 }
 
-bar="$($ITEM_PATH/volume) | $($ITEM_PATH/battery) | $(dtime) |"
+disk_usage() {
+    echo "🖴 $(df -h | grep '/$' | awk '{printf "%s %s/%s\n", $5, $3, $2}')"
+}
+
+bar="$($ITEM_PATH/volume) | $(disk_usage) | $($ITEM_PATH/battery) | $(dtime) |"
 xsetroot -name "$bar"
