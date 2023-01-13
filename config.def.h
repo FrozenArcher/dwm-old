@@ -76,7 +76,7 @@ static const Layout layouts[] = {
 /* commands */
 #define screenshotcmd "xfce4-screenshooter -r"
 #define appmenucmd "~/scripts/rofi-appmenu.sh"
-#define VOLCTL(cmd) SHCMD("~/dwm/scripts/volctl.sh "cmd)
+#define VOLCTL(cmd) SHCMD("~/dwm/scripts/bar_actions/volctl.sh "cmd)
 static const char *termcmd[]  = { "kitty", NULL };
 
 #include <X11/XF86keysym.h>

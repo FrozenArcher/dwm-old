@@ -33,7 +33,7 @@ git clone git@github.com:FrozenArcher/dwm.git
 
 # compile dwm
 cd dwm
-./install.sh
+sudo ./install
 ```
 
 ## My features
