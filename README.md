@@ -16,6 +16,13 @@ see [upstream](https://dwm.suckless.org/)
 * xfce4-screenshooter
 * xorg-xsetroot
 
+## Fonts
+
+* LXGW Wenkai Mono
+* FiraCode Nerd Font
+* Twemoji
+* Font Awesome 6 Free
+
 ## Installation
 
 ``` bash
