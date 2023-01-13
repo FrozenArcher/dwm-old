@@ -4,6 +4,8 @@ based on dwm 6.4
 
 see [upstream](https://dwm.suckless.org/)
 
+If you use a distro that doesn't use systemd, you should modify some relative scripts.
+
 ## Dependences
 
 The dwm package depends on:
