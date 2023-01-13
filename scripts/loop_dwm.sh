@@ -1,6 +1,9 @@
 #!/bin/bash
 
 while true; do
+    # dwm repo directory
+    export DWM_DIR=$HOME/dwm
+
 	# autostart script
 	~/scripts/wmrc.sh
 
