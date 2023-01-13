@@ -8,6 +8,12 @@ see [upstream](https://dwm.suckless.org/)
 
 ## Dependences
 
+The dwm package depends on:
+
+`libx11 libxinerama libxft`
+
+My dwm:
+
 * acpi
 * kitty
 * picom
@@ -22,6 +28,12 @@ see [upstream](https://dwm.suckless.org/)
 * FiraCode Nerd Font
 * Twemoji
 * Font Awesome 6 Free
+
+Installing fonts in archlinux
+
+```
+yay -S nerd-fonts-complete otf-font-awesome ttf-lxgw-wenkai ttf-lxgw-wenkai-mono ttf-twemoji
+```
 
 ## Installation
 
