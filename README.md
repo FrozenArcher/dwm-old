@@ -10,17 +10,25 @@ see [upstream](https://dwm.suckless.org/)
 
 The dwm package depends on:
 
-`libx11 libxinerama libxft`
+*libx11
+*libxinerama
+*libxft
 
 My dwm:
 
 * acpi
 * kitty
+* light
 * picom
 * pulseaudio (for `pactl`)
 * upower
 * xfce4-screenshooter
 * xorg-xsetroot
+
+Installing dependences in archlinux:
+```
+yay -S libx11 libxinerama libxft acpi kitty light picom pulseaudio upower xfce4-screenshooter xorg-xsetroot
+```
 
 ## Fonts
 
