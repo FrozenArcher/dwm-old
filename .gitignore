@@ -6,3 +6,4 @@
 /**/*.rej
 /**/sed*
 /config.h
+/log

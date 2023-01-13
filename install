@@ -6,21 +6,21 @@ if [ $(id -u) -ne 0 ]; then
 fi
 
 # If src file is newer than dst file, or dst file
-# doesn't exist, then install src to dst with mode 644,
+# doesn't exist, then install src to dst with given mode,
 # and print a message.
 # error: if $1
-# args: $1: src file, $2: dst file, $3: msg
+# args: $1: src file, $2: dst file, $3: mode, $4: message
 update_file() {
     if [ ! -f $1 ]; then
         echo "error: update_file: source file $1 does not exist."
         exit 1
     fi
     if [ ! -f $2 ] || [ $(stat -c %Y $1) -gt $(stat -c %Y $2) ]; then
-        if [[ $3 != "" ]]; then
-            echo $3
+        if [[ $4 != "" ]]; then
+            echo $4
         fi
         cp -avf $1 $2
-        chmod -v 644 $2
+        chmod -v $3 $2
     fi
 }
 
@@ -62,11 +62,13 @@ echo
 #     echo
 # fi
 
-update_file ./LICENSE /usr/share/licenses/dwm/LICENSE "LICENSE file not installed. Installing..."
+update_file ./LICENSE /usr/share/licenses/dwm/LICENSE 644 "Updating LICENSE..."
 
-update_file ./README.md /usr/share/doc/dwm/README.md "README.md not installed. Installing..."
+update_file ./README.md /usr/share/doc/dwm/README.md 644 "Updating README.md..."
 
-update_file ./dwm.desktop /usr/share/xsessions/dwm.desktop "dwm.desktop not installed. Installing..."
+update_file ./dwm.desktop /usr/share/xsessions/dwm.desktop 644 "Updating dwm.desktop..."
+
+update_file ./launch_dwm /usr/local/bin/launch_dwm 755 "Updating launch_dwm..."
 
 echo "==> removing config.h"
 echo

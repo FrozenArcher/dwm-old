@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ITEM_PATH="$HOME/dwm/scripts/bar_items"
+ITEM_PATH="$DWM_DIR/scripts/bar_items"
 
 dtime() {
     echo -e "🕓 $(date +"%m-%d %R")"

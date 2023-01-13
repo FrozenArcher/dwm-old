@@ -1,0 +1,22 @@
+#!/bin/bash
+
+################################################
+# IMPORTANT!!                                  #
+# run sudo ./install after editing this file!! #
+################################################
+
+while true; do
+	# dwm repo directory
+	# IMPORTANT: DO NOT FOLLOW A '/' !!!!
+	export DWM_DIR=$HOME/dwm
+
+	# autostart script
+	$DWM_DIR/scripts/wmrc.sh
+
+	# bar items
+	$DWM_DIR/scripts/bar.sh &
+
+	# Log stderror to a file
+	mkdir -p $DWM_DIR/log
+	dwm 2> $DWM_DIR/log/dwm.log
+done

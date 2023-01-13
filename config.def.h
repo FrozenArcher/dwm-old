@@ -75,9 +75,9 @@ static const Layout layouts[] = {
 
 /* commands */
 #define screenshotcmd "xfce4-screenshooter -r"
-#define appmenucmd "~/scripts/rofi-appmenu.sh"
-#define VOLCTL(cmd) SHCMD("~/dwm/scripts/bar_actions/volctl.sh "cmd)
-#define BLCTL(cmd) SHCMD("~/dwm/scripts/bar_actions/blctl.sh "cmd)
+#define appmenucmd "$DWM_DIR/scripts/rofi-appmenu.sh"
+#define VOLCTL(cmd) SHCMD("$DWM_DIR/scripts/bar_actions/volctl.sh "cmd)
+#define BLCTL(cmd) SHCMD("$DWM_DIR/scripts/bar_actions/blctl.sh "cmd)
 static const char *termcmd[]  = { "kitty", NULL };
 
 #include <X11/XF86keysym.h>
@@ -118,7 +118,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
-	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("~/scripts/powermenu.sh -e \"pkill dwm\"") },
+	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("$DWM_DIR/scripts/powermenu.sh") },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
 	{ MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = GAP_RESET } },

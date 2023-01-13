@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-UPDATE_CMD="~/dwm/scripts/update_bar.sh"
+UPDATE_CMD="$DWM_DIR/scripts/update_bar.sh"
 
 case $1 in
     up)

@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-UPDATE_CMD="sh -c ~/dwm/scripts/update_bar.sh"
+UPDATE_CMD="sh -c $DWM_DIR/scripts/update_bar.sh"
 
 DEF_SINK="$(pactl get-default-sink)"
 

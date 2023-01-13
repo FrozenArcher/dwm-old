@@ -4,8 +4,6 @@ based on dwm 6.4
 
 see [upstream](https://dwm.suckless.org/)
 
-**see my [dotfile repository](https://github.com/FrozenArcher/arch-config.git) for scripts used and the complete environment**
-
 ## Dependences
 
 The dwm package depends on:
@@ -21,13 +19,16 @@ My dwm:
 * light
 * picom
 * pulseaudio (for `pactl`)
+* rofi
 * upower
 * xfce4-screenshooter
 * xorg-xsetroot
 
+It is recommended to install softwares mentioned in `scripts/wmrc.sh`
+
 Installing dependences in archlinux:
 ```
-yay -S libx11 libxinerama libxft acpi kitty light picom pulseaudio upower xfce4-screenshooter xorg-xsetroot
+yay -S libx11 libxinerama libxft acpi kitty light picom pulseaudio rofi upower xfce4-screenshooter xorg-xsetroot
 ```
 
 ## Fonts
@@ -77,4 +78,5 @@ sudo ./install
 
 ## Upcoming features
 
-none
+* Add configuration section in README.md
+* Add automatic lock function

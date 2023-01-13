@@ -1,0 +1,3 @@
+#!/bin/bash
+
+i3lock-fancy -t "FrozenArcher -- HJJ" -f "HarmonyOS-Sans"
