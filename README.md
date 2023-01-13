@@ -6,7 +6,7 @@ see [upstream](https://dwm.suckless.org/)
 
 **see my [dotfile repository](https://github.com/FrozenArcher/arch-config.git) for scripts used and the complete environment**
 
-## Needed packages
+## Dependences
 
 * acpi
 * kitty
@@ -38,7 +38,8 @@ sudo ./install
 
 ## My features
 
-* audio control shortcuts & its realtime refresh bar module
+* volume control
+* brightness control
 * run autostart script (similar to the autostart patch)
 * rofi apprun menu
 * rofi powermenu
@@ -56,4 +57,4 @@ sudo ./install
 
 ## Upcoming features
 
-* brightness control
+none
