@@ -10,9 +10,9 @@ see [upstream](https://dwm.suckless.org/)
 
 The dwm package depends on:
 
-*libx11
-*libxinerama
-*libxft
+* libx11
+* libxinerama
+* libxft
 
 My dwm:
 
