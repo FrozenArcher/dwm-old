@@ -17,7 +17,7 @@ static const char *fonts[]          = {
 	"Twemoji:size=8",
 	"Font Awesome 6 Free:size=12",
 };
-static const char dmenufont[]       = "monospace:size=10";
+//static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -27,11 +27,16 @@ static const char *colors[][3]      = {
 	/*               	fg         bg        border   */
 	[SchemeNorm] 	 = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  	 = { col_gray4, col_cyan,  col_cyan  },
-	[SchemeStatus]   = { col_gray3, col_gray1, "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-	[SchemeTagsNorm] = { col_gray3, col_gray1, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-	[SchemeInfoSel]  = { col_gray4, col_cyan,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-	[SchemeInfoNorm] = { col_gray3, col_gray1, "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	// Statusbar right {text,background,not used but cannot be empty}
+	[SchemeStatus]   = { col_gray3, col_gray1, "#000000"  },
+	// Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  },
+	// Tagbar left unselected {text,background,not used but cannot be empty}
+	[SchemeTagsNorm] = { col_gray3, col_gray1, "#000000"  },
+	// infobar middle  selected {text,background,not used but cannot be empty}
+	[SchemeInfoSel]  = { col_gray4, col_cyan,  "#000000"  },
+	// infobar middle  unselected {text,background,not used but cannot be empty}
+	[SchemeInfoNorm] = { col_gray3, col_gray1, "#000000"  },
 };
 
 /* tagging */
@@ -42,11 +47,10 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class                instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",               NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",            NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Clash for Windows",  NULL,       NULL,       0,            1,           -1 },
-	{ "blueberry.py", 	NULL,       NULL,       0,            1,           -1 },
+	/* class                instance		title       tags mask     isfloating   monitor */
+	{ "firefox",            NULL,       		NULL,       1 << 8,       0,           -1 },
+	{ "Clash for Windows",  NULL,			NULL,       0,            1,           -1 },
+	{ "Blueberry.py", 	"blueberry.py",		NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */

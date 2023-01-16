@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # autostart
-# ~/scripts/locker &
+~/scripts/locker &
 picom -b --experimental-backends
 
 if [ $? -ne 0 ]; then
