@@ -5,5 +5,6 @@
 /**/*.orig
 /**/*.rej
 /**/sed*
-/config.h
-/log
+/log/
+/src/config.def.h
+/src/config.h
