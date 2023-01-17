@@ -33,8 +33,8 @@ fi
 
 if [[ $BAT_STAT == "charging" ]]; then
     # cable icon
-    ICON="🔌 $ICON"
+    ICON="$ICON ⚡"
     MSG="$BAT_PERC"
 fi
 
-echo "$MSG $ICON"
+echo "$ICON $MSG"
