@@ -18,6 +18,8 @@ static const char *fonts[]          = {
 	"Font Awesome 6 Free:size=12",
 };
 //static const char dmenufont[]       = "monospace:size=10";
+static const char col_blue1[]       = "#777799";
+static const char col_blue2[]       = "#567890";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -30,11 +32,11 @@ static const char *colors[][3]      = {
 	// Statusbar right {text,background,not used but cannot be empty}
 	[SchemeStatus]   = { col_gray3, col_gray1, "#000000"  },
 	// Tagbar left selected {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  },
+	[SchemeTagsSel]  = { col_gray4, col_blue2,  "#000000"  },
 	// Tagbar left unselected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm] = { col_gray3, col_gray1, "#000000"  },
 	// infobar middle  selected {text,background,not used but cannot be empty}
-	[SchemeInfoSel]  = { col_gray4, col_cyan,  "#000000"  },
+	[SchemeInfoSel]  = { col_gray4, col_blue1,  "#000000"  },
 	// infobar middle  unselected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm] = { col_gray3, col_gray1, "#000000"  },
 };
