@@ -26,11 +26,16 @@ My dwm:
 * xfce4-screenshooter
 * xorg-xsetroot
 
-It is recommended to install softwares mentioned in `scripts/wmrc.sh`
-
 Installing dependences in archlinux:
+
+``` bash
+yay -S libx11 libxinerama libxft acpi feh kitty light picom pulseaudio rofi upower xfce4-screenshooter xorg-xsetroot
 ```
-yay -S libx11 libxinerama libxft acpi kitty light picom pulseaudio rofi upower xfce4-screenshooter xorg-xsetroot
+
+Installing optional dependences:
+
+``` bash
+yay -S fcitx5-{im,lua,chinese-addons} blueberry bluez{,-utils} udiskie network-manager-applet clash-for-windows-bin
 ```
 
 ## Fonts
@@ -42,8 +47,8 @@ yay -S libx11 libxinerama libxft acpi kitty light picom pulseaudio rofi upower x
 
 Installing fonts in archlinux
 
-```
-yay -S nerd-fonts-complete otf-font-awesome ttf-lxgw-wenkai ttf-lxgw-wenkai-mono ttf-twemoji
+``` bash
+yay -S ttf-liberation nerd-fonts-complete otf-font-awesome ttf-lxgw-wenkai ttf-lxgw-wenkai-mono ttf-twemoji
 ```
 
 ## Installation
