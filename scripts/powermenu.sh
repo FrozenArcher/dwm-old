@@ -110,10 +110,18 @@ function command_exists() {
 }
 
 # loginctl required
-if ! command_exists systemctl ; then
-  echo 'command systemctl not found'
+if ! command_exists systemctl && ! command_exists loginctl; then
+  echo 'command systemctl or loginctl not found'
   exit 1
 fi
+
+if command_exists loginctl; then
+	CTL_CMD="loginctl"
+else
+	CTL_CMD="systemctl"
+fi
+
+#echo "$CTL_CMD command"
 
 # menu defined as an associative array
 typeset -A menu
@@ -121,10 +129,10 @@ typeset -A menu
 # Menu with keys/commands
 
 menu=(
-  [ Shutdown]="systemctl poweroff"
-  [ Reboot]="systemctl reboot"
-  [ Suspend]="systemctl suspend"
-  [ Hibernate]="systemctl hibernate"
+  [ Shutdown]="$CTL_CMD poweroff"
+  [ Reboot]="$CTL_CMD reboot"
+  [ Suspend]="$CTL_CMD suspend"
+  [ Hibernate]="$CTL_CMD hibernate"
   [ Lock]="$LOCKSCRIPT"
   [ Logout]="$EXIT_CMD"
   [ Cancel]=""
