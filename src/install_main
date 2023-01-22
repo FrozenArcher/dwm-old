@@ -62,6 +62,8 @@ echo
 #     echo
 # fi
 
+mkdir -p /usr/share/{,{licenses,doc}/dwm,xsessions}
+
 update_file ../LICENSE /usr/share/licenses/dwm/LICENSE 644 "Updating LICENSE..."
 
 update_file ../README.md /usr/share/doc/dwm/README.md 644 "Updating README.md..."
