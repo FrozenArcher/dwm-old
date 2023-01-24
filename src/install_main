@@ -44,8 +44,6 @@ echo
 make install
 echo
 
-mkdir -p /usr/share/{{licenses,doc}/dwm,xsessions}
-
 mkdir -p /usr/share/{,{licenses,doc}/dwm,xsessions}
 
 update_file ../LICENSE /usr/share/licenses/dwm/LICENSE 644 "Updating LICENSE..."
