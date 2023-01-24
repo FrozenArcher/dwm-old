@@ -1,4 +1,4 @@
-/dwm
+/src/dwm
 /**/*.o
 /patches
 /**/*.diff
