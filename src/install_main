@@ -44,23 +44,7 @@ echo
 make install
 echo
 
-# if [ ! -f /usr/share/licenses/dwm/LICENSE ]; then
-#     echo "LICENSE file not installed. Installing..."
-#     install -m644 -D LICENSE "/usr/share/licenses/dwm/LICENSE"
-#     echo
-# fi
-
-# if [ ! -f /usr/share/doc/dwm/README.md ]; then
-#     echo "README.md not installed. Installing..."
-#     install -m644 -D README.md "/usr/share/doc/dwm/README.md"
-#     echo
-# fi
-
-# if [ ! -f  /usr/share/xsessions/dwm.desktop ]; then
-#     echo "dwm.desktop not installed. Installing..."
-#     install -m644 -D ./dwm.desktop "/usr/share/xsessions/dwm.desktop"
-#     echo
-# fi
+mkdir -p /usr/share/{,{licenses,doc}/dwm,xsessions}
 
 update_file ../LICENSE /usr/share/licenses/dwm/LICENSE 644 "Updating LICENSE..."
 

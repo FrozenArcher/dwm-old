@@ -13,6 +13,8 @@ The dwm package depends on:
 * libx11
 * libxinerama
 * libxft
+* xorg-xmodmap
+* xorg-xrdb
 
 My dwm:
 
@@ -27,9 +29,10 @@ My dwm:
 * xorg-xsetroot
 
 Installing dependences in archlinux:
+<<<<<<< HEAD
 
 ``` bash
-yay -S libx11 libxinerama libxft acpi feh kitty light picom pulseaudio rofi upower xfce4-screenshooter xorg-xsetroot
+yay -S libx11 libxinerama libxft xorg-xmodmap xorg-xrdb acpi kitty light picom pulseaudio rofi upower xfce4-screenshooter xorg-xsetroot
 ```
 
 Installing optional dependences:
