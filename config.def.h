@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const Gap default_gap        = {.isgap = 1, .realgap = 10, .gappx = 10};
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const Gap default_gap        = {.isgap = 1, .realgap = 6, .gappx = 6 };
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corner, >0: systray on left of status text */
@@ -12,12 +12,11 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
 static const char *fonts[]          = {
-	"LXGW WenKai Mono:size=13",
-	"FiraCode Nerd Font:size=13",
-	"Twemoji:size=8",
+	"LXGW WenKai Mono:size=14",
+	"FiraCode Nerd Font:size=14",
+	"Twemoji:size=9",
 	"Font Awesome 6 Free:size=12",
 };
-//static const char dmenufont[]       = "monospace:size=10";
 static const char col_blue1[]       = "#777799";
 static const char col_blue2[]       = "#567890";
 static const char col_gray1[]       = "#222222";
@@ -49,16 +48,16 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class                instance		title       tags mask     isfloating   monitor */
-	{ "firefox",            NULL,       		NULL,       1 << 8,       0,           -1 },
-	{ "Clash for Windows",  NULL,			NULL,       0,            1,           -1 },
-	{ "Blueberry.py", 	"blueberry.py",		NULL,       0,            1,           -1 },
+	/* class                instance		    title       tags mask   isfloating   monitor */
+	{ "firefox",            NULL,       	    NULL,       0,          0,           -1 },
+	{ "Clash for Windows",  NULL,			    NULL,       0,          1,           -1 },
+	{ "Blueberry.py", 	    "blueberry.py",		NULL,       0,          1,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.618; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const float mfact        = 0.618; /* factor of master area size [0.05..0.95] */
+static const int nmaster        = 1;    /* number of clients in master area */
+static const int resizehints    = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
@@ -125,8 +124,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("$DWM_DIR/scripts/powermenu.sh") },
-	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
-	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
+	{ MODKEY,                       XK_minus,  setgaps,        {.i = -2 } },
+	{ MODKEY,                       XK_equal,  setgaps,        {.i = +2 } },
 	{ MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = GAP_RESET } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = GAP_TOGGLE} },
 	TAGKEYS(                        XK_1,                      0)

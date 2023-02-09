@@ -7,7 +7,7 @@ run() {
 }
 
 # autostart
-~/scripts/locker &
+~/.fehbg &
 
 run picom -b
 run cfw &
