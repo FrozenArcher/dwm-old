@@ -1,23 +1,17 @@
 #!/bin/bash
 
+run() {
+	if ! pgrep -f "$1" ; then
+		"$@"
+	fi
+}
+
 # autostart
 ~/scripts/locker &
-picom -b --experimental-backends
 
-if [ $? -ne 0 ]; then
-	picom -b
-fi
-
-~/.fehbg &
-fcitx5 -d --verbose 2
-cfw &
-xfce4-power-manager &
-
-# avoid multiple launch
-killall blueberry-tray
-killall udiskie
-
-# tray apps
-blueberry-tray
-udiskie --tray &
-nm-applet &
+run picom -b
+run cfw &
+run fcitx5 &
+run nm-applet &
+run udiskie --tray &
+run blueman-applet &
